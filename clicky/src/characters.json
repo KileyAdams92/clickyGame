@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Kim Possible",
+    "image": "./public/images/kimpossible.png"
+  },
+  {
+    "name": "CatDog",
+    "image": "./public/images/catdog.png"
+  },
+  {
+    "name": "Eliza Thornberry",
+    "image": "./public/images/eliza.png"
+  },
+  {
+    "name": "Reggie Rocket",
+    "image": "./public/images/reggieRocket.png"
+  },
+  {
+    "name": "Scooby Doo",
+    "image": "./public/images/Scooby-Doo.png"
+  },
+  {
+    "name": "Tom",
+    "image": "./public/images/tom.png"
+  }
+]

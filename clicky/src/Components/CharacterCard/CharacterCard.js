@@ -4,9 +4,9 @@ import "./CharacterCard.css";
 const CharacterCard = props => {
   return (
     <div className="CharacterCard card">
-      <div className="img=container">
-        <img src={props.image} />
-      </div>;
+      <div className="img-container">
+        <img src={props.image} alt={props.name} />
+      </div>
     </div>
   );
 };
