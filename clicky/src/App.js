@@ -5,6 +5,7 @@ import Wrapper from "./Components/Wrapper/Wrapper";
 import characters from "./characters.json";
 import Title from "./Components/Title/Title";
 import Instructions from "./Components/Instructions/Instructions";
+import Score from "./Components/Score/Score";
 
 class App extends Component {
   state = {
@@ -25,7 +26,8 @@ class App extends Component {
       });
       this.rotateCharacters();
     } else {
-      console.log("You've already clicked that character, resetting game");
+      alert("You've already clicked that character, resetting game");
+      this.rotateCharacters();
       this.setState({
         characters: characters,
         chosenCharacters: [],
@@ -62,6 +64,11 @@ class App extends Component {
           <Instructions>
             Click on an image to begin, try not to click the same image twice!
           </Instructions>
+          <Score>
+            {" "}
+            Score: {this.state.score} || Highest Score:{" "}
+            {this.state.highestScore}{" "}
+          </Score>
           {this.state.characters.map((character, i) => (
             <CharacterCard
               key={i}
