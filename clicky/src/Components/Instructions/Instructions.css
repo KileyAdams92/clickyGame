@@ -1,8 +1,8 @@
-.title {
+.instructions {
   height: 10vh;
   line-height: 10vh;
   font-family: "Raleway", sans-serif;
-  background-color: steelblue;
-  color: white;
+  background-color: white;
+  color: steelblue;
   box-shadow: 5px 10px 18px #888888;
 }

@@ -5,7 +5,14 @@ const CharacterCard = props => {
   return (
     <div className="CharacterCard card">
       <div className="img-container">
-        <img src={props.image} alt={props.name} />
+        <img
+          src={props.image}
+          name={props.name}
+          alt={props.name}
+          onClick={e => {
+            props.checkCard(e);
+          }}
+        />
       </div>
     </div>
   );

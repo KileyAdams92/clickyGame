@@ -3,28 +3,73 @@ import "./App.css";
 import CharacterCard from "./Components/CharacterCard/CharacterCard";
 import Wrapper from "./Components/Wrapper/Wrapper";
 import characters from "./characters.json";
+import Title from "./Components/Title/Title";
+import Instructions from "./Components/Instructions/Instructions";
 
 class App extends Component {
   state = {
-    characters
+    characters: characters,
+    chosenCharacters: [],
+    score: 0,
+    highestScore: 0
   };
 
+  checkCard = e => {
+    console.log(e.target.name);
+    if (this.state.chosenCharacters.indexOf(e.target.name) === -1) {
+      this.setState({
+        chosenCharacters: [...this.state.chosenCharacters, e.target.name]
+      });
+      this.setState(prevState => {
+        return { score: prevState.score + 1 };
+      });
+      this.rotateCharacters();
+    } else {
+      console.log("You've already clicked that character, resetting game");
+      this.setState({
+        characters: characters,
+        chosenCharacters: [],
+        score: 0
+      });
+    }
+  };
+
+  componentDidUpdate() {
+    console.log(this.state);
+  }
+
   //rotates images when images are clicked
-  rotateCharacters = () => {};
+  rotateCharacters = () => {
+    var a = this.state.characters;
+    var j, x, i;
+    for (i = a.length - 1; i > 0; i--) {
+      j = Math.floor(Math.random() * (i + 1));
+      x = a[i];
+      a[i] = a[j];
+      a[j] = x;
+    }
+    this.setState({
+      characters: a
+    });
+  };
 
   //renders images with onClick method
   render() {
     return (
       <Wrapper>
         <div className="App">
-          {this.state.characters.map(character => (
+          <Title>Clicky Game</Title>
+          <Instructions>
+            Click on an image to begin, try not to click the same image twice!
+          </Instructions>
+          {this.state.characters.map((character, i) => (
             <CharacterCard
-              name={CharacterCard.name}
-              image={CharacterCard.image}
+              key={i}
+              name={character.name}
+              image={character.image}
+              checkCard={this.checkCard}
             />
           ))}
-
-          <a onClick={() => this.rotateCharacters()}>{CharacterCard}</a>
         </div>
       </Wrapper>
     );
