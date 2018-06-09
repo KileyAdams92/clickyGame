@@ -22,7 +22,11 @@ class App extends Component {
         chosenCharacters: [...this.state.chosenCharacters, e.target.name]
       });
       this.setState(prevState => {
-        return { score: prevState.score + 1 };
+        const newScore = prevState.score + 1;
+        return {
+          score: newScore,
+          highestScore: Math.max(newScore, prevState.highestScore)
+        };
       });
       this.rotateCharacters();
     } else {
@@ -64,11 +68,10 @@ class App extends Component {
           <Instructions>
             Click on an image to begin, try not to click the same image twice!
           </Instructions>
-          <Score>
-            {" "}
-            Score: {this.state.score} || Highest Score:{" "}
-            {this.state.highestScore}{" "}
-          </Score>
+          <Score
+            score={this.state.score}
+            highestScore={this.state.highestScore}
+          />
           {this.state.characters.map((character, i) => (
             <CharacterCard
               key={i}
