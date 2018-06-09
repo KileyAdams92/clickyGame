@@ -1,19 +1,19 @@
 [
   {
     "name": "Kim Possible",
-    "image": "/images/kimpossible.jpg"
+    "image": "./images/kimpossible.jpg"
   },
   {
     "name": "CatDog",
-    "image": "/images/catdog.png"
+    "image": "./images/catdog.png"
   },
   {
     "name": "Eliza Thornberry",
-    "image": "/images/eliza.png"
+    "image": "./images/eliza.png"
   },
   {
     "name": "Reggie Rocket",
-    "image": "/images/reggieRocket.png"
+    "image": "./images/reggieRocket.png"
   },
   {
     "name": "Scooby Doo",
@@ -21,22 +21,22 @@
   },
   {
     "name": "Tom",
-    "image": "/images/tom.png"
+    "image": "./images/tom.png"
   },
   {
     "name": "Angry Beavers",
-    "image": "/images/angrybeavers.png"
+    "image": "./images/angrybeavers.png"
   },
   {
     "name": "Hey Arnold",
-    "image": "/images/heyarnold.png"
+    "image": "./images/heyarnold.png"
   },
   {
     "name": "Reptar",
-    "image": "/images/reptar.png"
+    "image": "./images/reptar.png"
   },
   {
     "name": "Daria",
-    "image": "/images/Daria.png"
+    "image": "./images/Daria.png"
   }
 ]
