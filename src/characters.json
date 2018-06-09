@@ -5,7 +5,7 @@
   },
   {
     "name": "CatDog",
-    "image": "./images/catdog.png"
+    "image": "./images/Catdog.png"
   },
   {
     "name": "Eliza Thornberry",
@@ -17,7 +17,7 @@
   },
   {
     "name": "Scooby Doo",
-    "image": "/images/Scooby-Doo.png"
+    "image": "./images/Scooby-Doo.png"
   },
   {
     "name": "Tom",
