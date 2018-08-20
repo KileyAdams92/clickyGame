@@ -72,14 +72,16 @@ class App extends Component {
             score={this.state.score}
             highestScore={this.state.highestScore}
           />
-          {this.state.characters.map((character, i) => (
-            <CharacterCard
-              key={i}
-              name={character.name}
-              image={character.image}
-              checkCard={this.checkCard}
-            />
-          ))}
+          <div className="cards">
+            {this.state.characters.map((character, i) => (
+              <CharacterCard
+                key={i}
+                name={character.name}
+                image={character.image}
+                checkCard={this.checkCard}
+              />
+            ))}
+          </div>
         </div>
       </Wrapper>
     );
